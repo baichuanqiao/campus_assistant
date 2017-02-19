@@ -1,1 +1,2 @@
-# campus_assistant
+# campus_assistant 
+这是移动开发课程的Android项目，使用Bmob云后端提供诸如注册、登录、数据保存等服务，项目中联系使用了RxJava来处理异步任务，Logger作为调试日志工具，ORM框架使用GreenDAO。
