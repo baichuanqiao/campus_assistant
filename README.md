@@ -3,7 +3,7 @@
 # 更新日志
 * 17/2/18：完成了部分的UI设计并且接入bmob后端云，完成注册登录逻辑，测试了bmob与greendao的配合。
 * 17/2/19: 使用自定义view来实现tab渐变切换，完成了ViewPager+Fragment+TabView的切换，在Fragment中接入了LRecyclerView。
-
+* 17/2/21: 完成了剩余Fragment的UI设计，查阅官网关于bmob的数据存储和查找介绍，准备编写剩下Fragment的逻辑代码。
 # 依赖列表：
 ```bash
 //一些支持库
