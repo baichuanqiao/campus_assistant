@@ -1,7 +1,7 @@
 package com.baichuan.campus_assistant.utils;
 
 /**
- * Created by Junerver on 2015/11/12.
+ * Created by baichuan on 2015/11/12.
  * 跟网络相关的工具类
  */
 

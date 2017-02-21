@@ -11,11 +11,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import com.baichuan.campus_assistant.R;
 
+import com.baichuan.campus_assistant.ui.fragment.TaskFragment;
 import com.baichuan.campus_assistant.ui.widget.TabView;
 
 import com.baichuan.campus_assistant.ui.fragment.ConfigFragment;
 import com.baichuan.campus_assistant.ui.fragment.NoteFragment;
-
+import com.baichuan.campus_assistant.ui.fragment.TaskFragment;
+import com.baichuan.campus_assistant.ui.fragment.HelpFragment;
+import com.baichuan.campus_assistant.ui.fragment.MessageFragment;
 import java.security.acl.NotOwnerException;
 import java.util.Date;
 import java.util.HashMap;
@@ -31,9 +34,9 @@ import cn.bmob.v3.listener.QueryListener;
 import cn.bmob.v3.listener.SaveListener;
 
 public class MainActivity extends BaseActivity {
-    private String[] mTitle = {"服务", "设置"};
-    private int[] mIconSelect = {R.drawable.docker_tab_doc_selected, R.drawable.docker_tab_setting_selected};
-    private int[] mIconNormal = {R.drawable.docker_tab_doc_normal, R.drawable.docker_tab_setting_normal};
+    private String[] mTitle = {"服务","求助","任务","消息","设置"};
+    private int[] mIconSelect = {R.drawable.docker_tab_doc_selected, R.drawable.docker_tab_doc_selected,R.drawable.docker_tab_doc_selected,R.drawable.docker_tab_doc_selected,R.drawable.docker_tab_setting_selected};
+    private int[] mIconNormal = {R.drawable.docker_tab_doc_normal, R.drawable.docker_tab_doc_normal,R.drawable.docker_tab_doc_normal,R.drawable.docker_tab_doc_normal,R.drawable.docker_tab_setting_normal};
     private ViewPager mViewPager ;
     private TabView mTabView ;
     private Map<Integer,Fragment> mFragmentMap ;
@@ -42,7 +45,7 @@ public class MainActivity extends BaseActivity {
     protected void initView() {
         mFragmentMap = new HashMap<>() ;
         mViewPager = (ViewPager)findViewById(R.id.id_view_pager) ;
-        mViewPager.setOffscreenPageLimit(2);
+        mViewPager.setOffscreenPageLimit(4);
         mViewPager.setAdapter(new PageAdapter(getSupportFragmentManager()));
         mTabView = (TabView)findViewById(R.id.id_tab) ;
         mTabView.setViewPager(mViewPager);
@@ -63,6 +66,15 @@ public class MainActivity extends BaseActivity {
                     fragment = new NoteFragment() ;
                     break ;
                 case 1:
+                    fragment = new HelpFragment();
+                    break ;
+                case 2:
+                    fragment = new TaskFragment();
+                    break ;
+                case 3:
+                    fragment = new MessageFragment();
+                    break ;
+                case 4:
                     fragment = new ConfigFragment();
                     break ;
             }

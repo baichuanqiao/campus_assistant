@@ -28,7 +28,7 @@ public class SplashActivity extends AppCompatActivity {
                 isFirstRun();
                 SplashActivity.this.finish();
             }
-        }, 1000);
+        }, 3000);
     }
 
     public void isFirstRun() {

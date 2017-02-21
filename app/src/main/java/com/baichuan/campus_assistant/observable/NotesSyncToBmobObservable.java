@@ -21,8 +21,7 @@ import rx.schedulers.Schedulers;
  * Created by baichuan on 2017/2/19.
  * 用于同步本地数据到bmob云
  * 两种情况，本地有云端无（基于isSync标记位），云端有本地无。
- * 2016.10.13 0:34
- * —— 测试通过，可以将本地数据同步到云端
+ *
  */
 public class NotesSyncToBmobObservable {
     public static Observable syncToBmob() {
