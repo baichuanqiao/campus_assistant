@@ -42,14 +42,12 @@ import rx.functions.Action0;
  */
 public class NoteFragment extends BaseFragment implements Observer<List<NoteEntity>> {
 
-    @BindView(R.id.ivMine)
-    ImageView mIvMine;
+
     @BindView(R.id.ivSync)
     ImageView mIvSync;
     @BindView(R.id.rvList)
     LRecyclerView mRvList;
-    @BindView(R.id.fabAddNote)
-    FloatingActionButton mFabAddNote;
+
 
     private LRecyclerViewAdapter mLRecyclerViewAdapter;
     private NoteRecyclerAdapter mDataAdapter;
@@ -97,11 +95,9 @@ public class NoteFragment extends BaseFragment implements Observer<List<NoteEnti
     }
 
 
-    @OnClick({R.id.ivMine, R.id.ivSync})
+    @OnClick({ R.id.ivSync})
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.ivMine:
-                break;
             case R.id.ivSync:
                 mIvSync.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.anim_sync));   //动画效果
                 synvToDb();
@@ -121,11 +117,7 @@ public class NoteFragment extends BaseFragment implements Observer<List<NoteEnti
         }
     }
 
-    @OnClick(R.id.fabAddNote)
-    public void onClick() {
-        //进入添加页面
-        startActivity(new Intent(mContext, EditNoteActivity.class));
-    }
+
 
 
     @Override

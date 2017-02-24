@@ -5,7 +5,7 @@ package com.baichuan.campus_assistant;
  */
 public class Constants {
     //Bmob云后台APPID
-    public static final String APPID = "3cb78a02af0518916725b906e9dfd48f";
+    public static final String APPID = "780fd0497f6348508635d512b1aedd8d";
     //数据库名称
     public static final String DB_NAME = "campus_assistant";
 }

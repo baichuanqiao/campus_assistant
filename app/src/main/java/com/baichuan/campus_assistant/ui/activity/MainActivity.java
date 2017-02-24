@@ -35,8 +35,8 @@ import cn.bmob.v3.listener.SaveListener;
 
 public class MainActivity extends BaseActivity {
     private String[] mTitle = {"服务","求助","任务","消息","设置"};
-    private int[] mIconSelect = {R.drawable.docker_tab_doc_selected, R.drawable.docker_tab_doc_selected,R.drawable.docker_tab_doc_selected,R.drawable.docker_tab_doc_selected,R.drawable.docker_tab_setting_selected};
-    private int[] mIconNormal = {R.drawable.docker_tab_doc_normal, R.drawable.docker_tab_doc_normal,R.drawable.docker_tab_doc_normal,R.drawable.docker_tab_doc_normal,R.drawable.docker_tab_setting_normal};
+    private int[] mIconSelect = {R.drawable.docker_tab_service_selected, R.drawable.docker_tab_help_selected,R.drawable.docker_tab_task_selected,R.drawable.docker_tab_message_selected,R.drawable.docker_tab_setting_selected};
+    private int[] mIconNormal = {R.drawable.docker_tab_service_normal, R.drawable.docker_tab_help_normal,R.drawable.docker_tab_task_normal,R.drawable.docker_tab_message_normal,R.drawable.docker_tab_setting_normal};
     private ViewPager mViewPager ;
     private TabView mTabView ;
     private Map<Integer,Fragment> mFragmentMap ;

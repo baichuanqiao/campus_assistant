@@ -105,7 +105,7 @@ public class NoteDetailActivity extends BaseActivity {
                 break;
             case R.id.btnDelete:
                 AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-                builder.setTitle("确认要删除这个笔记么？");
+                builder.setTitle("确认要删除这个服务么？");
                 builder.setPositiveButton("确认", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -120,6 +120,7 @@ public class NoteDetailActivity extends BaseActivity {
                                     CloudNoteApp.getNoteEntityDao().delete(mNoteEntity);
                                     showShortToast(getString(R.string.del_success));
                                     finish();
+                                    startActivity(new Intent(mContext, MainActivity.class));//确保删除笔记后视图的及时更新
                                 } else {
                                     Logger.d("bmob数据删除失败：" + e.getMessage() + "," + e.getErrorCode());
                                     showShortToast(getString(R.string.del_bmob_err));

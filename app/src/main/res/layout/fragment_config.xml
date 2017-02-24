@@ -1,9 +1,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
               android:orientation="vertical"
-             tools:context=".ui.fragment.NoteFragment">
+              tools:context=".ui.fragment.NoteFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -32,10 +32,7 @@
             android:layout_below="@+id/ivUserAvatar"
             android:layout_centerHorizontal="true"/>
     </RelativeLayout>
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:src="@color/gray"/>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -43,42 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/setting_list_item_height"
-                android:orientation="horizontal"
-                android:background="#ffffff"
-                android:paddingLeft="@dimen/setting_list_item_padding_vertical"
-                android:paddingRight="@dimen/setting_list_item_padding_vertical"
-                android:paddingTop="@dimen/setting_list_item_padding_horizontal"
-                android:paddingBottom="@dimen/setting_list_item_padding_horizontal">
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/ic_font"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="6"
-                    android:layout_marginLeft="@dimen/setting_list_item_margin"
-                    android:layout_marginStart="@dimen/setting_list_item_margin"
-                    android:text="@string/setting_text_font"
-                    android:textSize="@dimen/setting_list_item_text"
-                    android:gravity="center_vertical|start"/>
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/ic_right_icon"/>
 
-            </LinearLayout>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:src="@color/gray"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/setting_list_item_height"
@@ -100,7 +62,7 @@
                     android:layout_weight="6"
                     android:layout_marginLeft="@dimen/setting_list_item_margin"
                     android:layout_marginStart="@dimen/setting_list_item_margin"
-                    android:text="@string/setting_text_message"
+                    android:text="我的求助"
                     android:textSize="@dimen/setting_list_item_text"
                     android:gravity="center_vertical|start"/>
                 <ImageView
@@ -125,19 +87,21 @@
                 android:paddingRight="@dimen/setting_list_item_padding_vertical"
                 android:paddingTop="@dimen/setting_list_item_padding_horizontal"
                 android:paddingBottom="@dimen/setting_list_item_padding_horizontal">
+
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:scaleType="centerInside"
                     android:src="@drawable/ic_about"/>
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="6"
                     android:layout_marginLeft="@dimen/setting_list_item_margin"
                     android:layout_marginStart="@dimen/setting_list_item_margin"
-                    android:text="@string/setting_text_about"
+                    android:text="我的任务"
                     android:textSize="@dimen/setting_list_item_text"
                     android:gravity="center_vertical|start"/>
                 <ImageView
@@ -146,9 +110,48 @@
                     android:layout_weight="1"
                     android:scaleType="centerInside"
                     android:src="@drawable/ic_right_icon"/>
+
+
+
+            </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:src="@color/gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="#ffffff"
+                android:paddingLeft="@dimen/setting_list_item_padding_vertical"
+                android:paddingRight="@dimen/setting_list_item_padding_vertical"
+                android:paddingTop="@dimen/setting_list_item_padding_horizontal"
+                android:paddingBottom="@dimen/setting_list_item_padding_horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_font"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:layout_marginLeft="@dimen/setting_list_item_margin"
+                    android:layout_marginStart="@dimen/setting_list_item_margin"
+                    android:text="我的消息"
+                    android:textSize="@dimen/setting_list_item_text"
+                    android:gravity="center_vertical|start"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_right_icon"/>
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-
 
 </LinearLayout>
