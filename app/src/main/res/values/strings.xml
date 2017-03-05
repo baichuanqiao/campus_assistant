@@ -17,7 +17,8 @@
     <string name="save_success">服务发布成功！</string>
     <string name="no_connect">没有网络连接！！！</string>
     <string name="username_nonblank">对不起，用户名不能为空</string>
-    <string name="password_nonblank">对不起，用密码不能为空</string>
+    <string name="password_nonblank">对不起，密码不能为空</string>
+    <string name="nickname_nonblank">对不起，昵称不能为空</string>
     <string name="user_pass_err">用户名或者密码错误！！！</string>
     <string name="del_success">服务已删除！</string>
     <string name="del_bmob_err">错误！请稍后再试！</string>

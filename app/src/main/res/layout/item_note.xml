@@ -54,6 +54,18 @@
             android:layout_toEndOf="@+id/tvDate"
             android:layout_marginLeft="18dp"
             android:layout_marginStart="18dp"/>
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvDate"
+            android:layout_alignLeft="@+id/tvSummary"
+            android:layout_alignStart="@+id/tvSummary"
+            android:layout_marginLeft="26dp"
+            android:layout_marginStart="26dp"
+            android:id="@+id/userId"
+            android:layout_alignTop="@+id/tvTitle" />
     </RelativeLayout>
 
 </android.support.v7.widget.CardView>

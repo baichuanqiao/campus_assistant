@@ -3,11 +3,14 @@ package com.baichuan.campus_assistant.ui.fragment;
 
 import android.content.Intent;
 import android.support.v4.app.Fragment;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.baichuan.campus_assistant.R;
 import com.baichuan.campus_assistant.ui.activity.LoginActivity;
+import com.baichuan.campus_assistant.ui.activity.MainActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -22,6 +25,8 @@ public class ConfigFragment extends BaseFragment {
     ImageView mIvUserAvatar;
     @BindView(R.id.btnInOut)
     Button mBtnInOut;
+    @BindView(R.id.myTask)
+    TextView textView;
 
     @Override
     protected void init() {
@@ -37,10 +42,21 @@ public class ConfigFragment extends BaseFragment {
     }
 
 
-    @OnClick(R.id.btnInOut)
-    public void onClick() {
-        BmobUser.logOut();   //清除缓存用户对象
-        startActivity(new Intent(mContext, LoginActivity.class));
-        getActivity().finish();
+    @OnClick({R.id.btnInOut,R.id.myTask})
+    public void onClick(View view) {
+        switch(view.getId()){
+            case  R.id.btnInOut:
+                BmobUser.logOut();   //清除缓存用户对象
+                startActivity(new Intent(mContext, LoginActivity.class));
+                getActivity().finish();
+                break;
+            case  R.id.myTask:
+                startActivity(new Intent(mContext,MainActivity.class));
+                getActivity().finish();
+                break;
+        }
+
     }
+
+
 }

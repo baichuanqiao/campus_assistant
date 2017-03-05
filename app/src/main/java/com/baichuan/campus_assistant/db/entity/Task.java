@@ -6,7 +6,7 @@ import cn.bmob.v3.BmobObject;
  * Created by baichuan on 2017/2/19.
  * 用于bmob云后端使用的后端实体
  */
-public class Note extends BmobObject {
+public class Task extends BmobObject {
 
     private String title;
     private String summary;
@@ -81,7 +81,6 @@ public class Note extends BmobObject {
         entity.setVideo(getVideo());
         entity.setId(getDbId());
         entity.setDate(getUpdatedAt());
-        entity.toBmob().setUserObjId(getUserObjId());
         return entity;
     }
 }

@@ -50,8 +50,8 @@ public class NoteEntity implements Parcelable {
 
 
     @Generated(hash = 290996040)
-    public NoteEntity(long id, String title, String summary, String content,
-                      String image, String video, String date, String objId, boolean isSync) {
+    public NoteEntity(long id, String title, String summary, String content, String image,
+            String video, String date, String objId, boolean isSync) {
         this.id = id;
         this.title = title;
         this.summary = summary;
@@ -66,7 +66,6 @@ public class NoteEntity implements Parcelable {
     @Generated(hash = 734234824)
     public NoteEntity() {
     }
-
 
     public String getImage() {
         return image;
@@ -147,6 +146,7 @@ public class NoteEntity implements Parcelable {
     public void setIsSync(boolean isSync) {
         this.isSync = isSync;
     }
+
 
 
     @Override

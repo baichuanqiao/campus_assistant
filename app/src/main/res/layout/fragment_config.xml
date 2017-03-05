@@ -103,7 +103,8 @@
                     android:layout_marginStart="@dimen/setting_list_item_margin"
                     android:text="我的任务"
                     android:textSize="@dimen/setting_list_item_text"
-                    android:gravity="center_vertical|start"/>
+                    android:gravity="center_vertical|start"
+                    android:id="@+id/myTask" />
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"

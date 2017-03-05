@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import com.baichuan.campus_assistant.db.entity.MyUser;
 import com.baichuan.campus_assistant.R;
 import com.baichuan.campus_assistant.utils.NetUtils;
 
@@ -71,10 +71,10 @@ public class LoginActivity extends BaseActivity {
                     return;
                 } else {
                     showProgress();
-                    BmobUser bmobUser = new BmobUser();
-                    bmobUser.setUsername(mLoginUsername);
-                    bmobUser.setPassword(mLoginPassword);
-                    bmobUser.login(new SaveListener<BmobUser>() {
+                    MyUser myUser = new MyUser();
+                    myUser.setUsername(mLoginUsername);
+                    myUser.setPassword(mLoginPassword);
+                    myUser.login(new SaveListener<BmobUser>() {
                         @Override
                         public void done(BmobUser bmobUser, BmobException e) {
                             closeProgress();

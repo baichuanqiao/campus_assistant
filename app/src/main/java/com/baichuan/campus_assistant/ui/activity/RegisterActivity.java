@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-
+import com.baichuan.campus_assistant.db.entity.MyUser;
 import com.baichuan.campus_assistant.R;
 import com.baichuan.campus_assistant.utils.NetUtils;
 
@@ -22,6 +22,8 @@ public class RegisterActivity extends BaseActivity {
     EditText mEtRegisterUsername;
     @BindView(R.id.etRegisterPassword)
     EditText mEtRegisterPassword;
+    @BindView(R.id.etRegisterNickname)
+    EditText mEtRegisterNickname;
     @BindView(R.id.btnRegister)
     Button mBtnRegister;
     @BindView(R.id.ivBack)
@@ -29,6 +31,7 @@ public class RegisterActivity extends BaseActivity {
 
     private String mRegisterUsername;
     private String mRegisterPassword;
+    private String mRegisterNickname;
 
     @Override
     protected void initView() {}
@@ -53,6 +56,7 @@ public class RegisterActivity extends BaseActivity {
             case R.id.btnRegister:
                 mRegisterUsername = mEtRegisterUsername.getText().toString().trim();
                 mRegisterPassword = mEtRegisterPassword.getText().toString().trim();
+                mRegisterNickname = mEtRegisterNickname.getText().toString().trim();
                 //都不是空
                 if (!NetUtils.isConnected(mContext)) {
                     showShortToast(getString(R.string.no_connect));
@@ -64,15 +68,21 @@ public class RegisterActivity extends BaseActivity {
                     mEtRegisterPassword.requestFocus();
                     mEtRegisterPassword.setError(getString(R.string.password_nonblank));
                     return;
-                } else {
+                }  else if (TextUtils.isEmpty(mRegisterNickname)) {
+                    mEtRegisterNickname.requestFocus();
+                    mEtRegisterNickname.setError(getString(R.string.nickname_nonblank));
+                    return;
+                }
+                else {
                     showProgress();
-                    BmobUser bmobUser = new BmobUser();
-                    bmobUser.setUsername(mRegisterUsername);
-                    bmobUser.setPassword(mRegisterPassword);
+                    MyUser myUser = new MyUser();
+                    myUser.setUsername(mRegisterUsername);
+                    myUser.setPassword(mRegisterPassword);
+                    myUser.setNickname(mRegisterNickname);
                     //注意：不能用save方法进行注册
-                    bmobUser.signUp(new SaveListener<BmobUser>() {
+                    myUser.signUp(new SaveListener<MyUser>() {
                         @Override
-                        public void done(BmobUser s, BmobException e) {
+                        public void done(MyUser myUser, BmobException e) {
                             closeProgress();
                             if (e == null) {
                                 showShortToast(getString(R.string.register_success));

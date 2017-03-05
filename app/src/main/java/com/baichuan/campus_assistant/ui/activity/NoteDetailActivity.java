@@ -23,7 +23,7 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.UpdateListener;
-
+import cn.bmob.v3.BmobUser;
 /**
  * 用于查看笔记的页面
  */
@@ -99,10 +99,12 @@ public class NoteDetailActivity extends BaseActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnEdit:
+
                 Intent editIntent = new Intent(mContext, EditNoteActivity.class);
                 editIntent.putExtra("Note", mNoteEntity);
                 startActivityForResult(editIntent, EDIT_NOTE);
                 break;
+
             case R.id.btnDelete:
                 AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
                 builder.setTitle("确认要删除这个服务么？");
